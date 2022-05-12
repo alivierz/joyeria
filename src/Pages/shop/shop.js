@@ -6,6 +6,7 @@ import ItemShop from "../../component/itemShop/itemShop"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import './shop.css'
+import { set } from "react-hook-form"
 const Shop = () =>{
     //? Estados para paginacion y demas cosas que se me ocurran
     const [min, setMin] = useState(0)
@@ -27,6 +28,8 @@ const Shop = () =>{
     //*Renderizados para los componentes en la app
     const fil = (value) =>{
         setFilter(value)
+        setMin(0)
+        setMax(4)
     }
 
     const navCategory = productCate.map((value) => <button key={value.id} className='btn-category' onClick={() => fil(value.name)}>{value.name}</button>)
