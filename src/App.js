@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './Pages/login/login';
+import Register from './Pages/login/register';
+import ProtectedPages from './component/protectPages/protecPages';
+import Shop from './Pages/shop/shop';
+import { Route, Routes, HashRouter } from 'react-router-dom';
+import Product from './Pages/product/product';
+import Cart from './Pages/cart/cart';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+       <Routes>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/singUp' element={<Register/>}/>
+          <Route element={<ProtectedPages/>}>
+            <Route path='/' />
+            <Route path='/shop' element={<Shop/>}/>
+            <Route path='/shop/:id' element={<Product/>} />
+            <Route path='/cart' element={<Cart/>}/>
+          </Route>
+        </Routes>
+    </HashRouter>
   );
 }
 

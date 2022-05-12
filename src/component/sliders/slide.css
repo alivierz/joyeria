@@ -1,0 +1,24 @@
+.item {
+    height: 350px;
+    margin: 0 auto;
+}
+@media (min-width: 900px){
+    .item{
+        height: 500px;
+    }
+}
+.slider-container{
+    overflow: hidden;
+    width: 100%;
+}
+.slider-m{
+    display: flex;
+}
+.item-m{
+    min-width: 100%;
+    padding: 0 1rem;
+}
+.item-m > img{
+    pointer-events: none;
+    border-radius: 50%;
+}

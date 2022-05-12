@@ -1,0 +1,141 @@
+.container-form{
+    background-image: url(https://i.imgur.com/SLwpagr.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+.container-flex{
+    background-color: rgba(255, 0, 128, 0.5);
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    height: 450px;
+}
+@media (min-width: 800px){
+    .container-flex{
+        margin: 0 25%;
+        height: 500px;
+    }
+}
+.container-flex > h3{
+    margin: 0;
+    padding: 1rem 0 0 0;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+.form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    row-gap: 1rem;
+    padding: 1rem 1rem 0 1rem;
+}
+.form2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 25% 25% auto;
+    row-gap: .5rem;
+    padding: 0 1rem 0 1rem;
+}
+.submit{
+    margin:  1rem auto 0 auto;
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #fcb7af;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.email, .password{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.email > label, .password > label{
+    color: white;
+    padding: .5rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.email > input, .password > input{
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+}
+.sing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.sing > p{
+    margin: 0;
+    padding-right: .5rem;
+}
+.sing > a{
+    text-decoration: none;
+    color: white;
+    border: 3px solid #fcb7af;
+    padding: .5rem;
+    margin: 0;
+    border-radius: 1rem;
+    transition: all .5s ease-in-out;
+}
+.sing > a:hover{
+    background-color: #fcb7af;
+}
+.link{
+    width: 40%;
+    text-align: center;
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.user > input{
+    width: 35%;
+    text-align: center;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+.sing2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.sing2 > p{
+    margin: 0;
+    padding-right: .5rem;
+}
+.sing2 > a{
+    text-decoration: none;
+    color: white;
+    border: 3px solid #fcb7af;
+    padding: .5rem;
+    margin: 0;
+    border-radius: 1rem;
+    transition: all .5s ease-in-out;
+}
+.sing2 > a:hover{
+    background-color: #fcb7af;
+}

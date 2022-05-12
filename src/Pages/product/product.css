@@ -1,0 +1,133 @@
+.section{
+    margin: 1rem 1rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 18.75rem);
+    row-gap: 1rem;
+    justify-content: center;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+.profile > h2{
+    margin: 0 10%;
+    text-align: center;
+}
+.profile > p{
+    text-align: justify;
+    border: 1px solid white;
+    padding: 1rem;
+}
+.profile > span{
+    align-self: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.others{
+    display: grid;
+    grid-template-columns: 19.75rem;
+    justify-content: center;
+    row-gap: 1rem;
+    padding-bottom: 2rem;
+}
+.others > img{
+    border-radius: 50%;
+}
+@media (min-width:650px){
+    .section{
+        grid-template-columns: 50% 18.75rem;
+        column-gap: 2rem;
+    }
+    .profile > h2{
+        text-align: start;
+        margin: 0;
+    }
+    .profile > span{
+        align-self: start;
+    }
+}
+@media (min-width: 750px){
+    .others{
+        grid-template-columns: repeat(2, 19.75rem);
+        column-gap: 5%;
+        padding: 2rem;
+    }
+}
+@media (min-width: 1100px){
+    .others{
+        grid-template-columns: repeat(3, 19.75rem);
+        column-gap: 5%;
+        padding: 2rem;
+    }
+}
+.buy-container{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin: 0 auto;
+    border: 2px solid white;
+    padding: 1rem;
+}
+.buy-container > h4{
+    text-align: center;
+    margin: 0;
+}
+.counter{
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0;
+}
+.counter > span{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.counter > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.counter > div > button{
+    margin: 0 .5rem;
+    padding: .2rem;
+    font-size: 2rem;
+    border: none;
+    width: 50%;
+    border-radius: 2rem;
+    background-color: red;
+    cursor: pointer;
+}
+.counter > div > button:first-of-type{
+    margin-left: 0;
+    background-color: greenyellow;
+}
+.sure{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+}
+.sure > button{
+    background-color: violet;
+    border: none;
+    padding: .3rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+.red{
+    background-color: red;
+    margin: 0 10%;
+    border-radius: 2rem;
+}
+.green{
+    background-color: green;
+    margin: 0 10%;
+    border-radius: 2rem;
+}
+.add{
+    background-color: violet;
+    border: none;
+    border-radius: 2rem;
+    padding: .5rem;
+    cursor: pointer;
+}

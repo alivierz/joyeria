@@ -1,0 +1,54 @@
+.item-container{
+    margin: 2rem;
+    background-color: rgb(195, 155, 211);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+.price{
+    width: 100%;
+    text-align: center;
+    padding: 0 0 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.item-container > h3{
+    text-align: center;
+    color: white;
+}
+.imagen{
+    max-width: 100%;
+    border-radius: 2rem;
+}
+.counter-img-item{
+    position: relative;
+}
+.arrows{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.arrow{
+    font-size: 2.5rem;
+    background-color: white;
+    padding: .2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.link-personal{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+.link-personal > a{
+    text-decoration: none;
+    color: white;
+    border: 5px solid white;
+    padding: .5rem;
+    transition: all .5s ease-in-out;
+}
+.link-personal > a:hover{
+    background-color: white;
+    color: black;
+}
