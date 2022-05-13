@@ -60,6 +60,7 @@ const Product = () =>{
             }
         }
     }
+
     return(
         <div>
             <CartLink/>

@@ -95,3 +95,27 @@
     margin-left: 2rem;
     cursor: pointer;
 }
+.cont-srearch{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 850px){
+    .cont-srearch{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.water{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.input{
+    width: 50%;
+    border-radius: 2rem;
+    padding: 1rem;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+}

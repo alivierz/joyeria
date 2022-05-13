@@ -6,12 +6,12 @@ import ItemShop from "../../component/itemShop/itemShop"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import './shop.css'
-import { set } from "react-hook-form"
 const Shop = () =>{
     //? Estados para paginacion y demas cosas que se me ocurran
     const [min, setMin] = useState(0)
     const [max , setMax] = useState(4)
     const [ filter, setFilter ] = useState('')
+    const [ serach, setSerach] = useState('')
 
     const dispatch = useDispatch()//*Despacho de la informacion de la api por redux Thunk
 
@@ -34,7 +34,17 @@ const Shop = () =>{
 
     const navCategory = productCate.map((value) => <button key={value.id} className='btn-category' onClick={() => fil(value.name)}>{value.name}</button>)
     
-    
+    //* Buscador filtrado
+    const searchFill = productArr.filter((value) => {
+        if(serach){
+            return value.name.toLowerCase().includes(serach.toLowerCase())
+        }else{
+            return ''
+        }
+    })
+    const listItemsSerach = searchFill.map((value) => <ItemShop key={value.id} props={value}/>)
+
+
     const filterArr = productArr.filter((value) => {
         if(filter === ''){
             return value
@@ -82,6 +92,13 @@ const Shop = () =>{
                 <div className="buttons-line">
                     <button onClick={prev} className='prev'><FontAwesomeIcon icon={faArrowLeft}/></button>
                     <button onClick={next} className='next'><FontAwesomeIcon icon={faArrowRight}/></button>
+                </div>
+            </div>
+            <div className="water">
+                <input type="text" onChange={(e) => setSerach(e.target.value)} className='input' placeholder="Searching"/>
+
+                <div className="cont-srearch">
+                    {listItemsSerach}
                 </div>
             </div>
         </main>
